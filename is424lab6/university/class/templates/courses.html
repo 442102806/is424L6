@@ -1,0 +1,7 @@
+<h1>courses:</h1>
+<ul>
+    {% for course in courses %}
+    <li>course {{course.courseName}}</li>
+    {% endfor %}
+</ul>
+<a href = "{%url 'addcourse' %}">add course</a>

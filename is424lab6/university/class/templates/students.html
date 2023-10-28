@@ -1,0 +1,7 @@
+<h1>students:</h1>
+<ul>
+    {% for student in students %}
+    <li><a href = "{%url 'student' student.id %}"> {{student.IDs}}</a>Student {{student.fName}} {{student.lName}}. {{student.age}} old</li>
+    {% endfor %}
+</ul>
+<a href = "{% url 'addStudent' %}">add student</a>

@@ -1,0 +1,16 @@
+<h1>Add Student</h1>
+<form method="post">
+  {% csrf_token %}
+  <label for="fName"></label>
+  first name :<input type="text" name="fName">
+  <label for="lName"></label>
+  last name :<input type="text" name="lName">
+  <label for="age"></label>
+  age :<input type="text" name="age">
+  <label for="IDs"></label>
+  ID :<input type="text" name="IDs">
+
+  <button type="submit">Add</button>
+</form>
+
+<a href="{% url 'stu' %}">Back to Student List!</a>

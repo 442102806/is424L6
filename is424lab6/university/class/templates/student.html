@@ -1,0 +1,25 @@
+<h1>student {{studnet.id}}</h1>
+ <ul>
+    <li>name : {{student.fName}} {{student.lName}} </li>
+    <li>age : {{student.age}}</li>
+    <li>ID : {{student.IDs}}</li>
+ </ul>
+
+ <h1>courses</h1>
+ <ol>
+    {% for course in student.courses %}
+    <li>{{course.courseName}}</li>
+    {% endfor %}
+ </ol>
+
+ <h1>add courses</h1>
+ <form>
+    <select name = "course" id="">
+        {% for course in notCourses %}
+            <option value="{{course.id}}"> {{ course }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit">
+</form>
+
+ <a href = "{%url 'stu' %}">all students</a>
